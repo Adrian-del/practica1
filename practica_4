@@ -1,0 +1,32 @@
+public static void main(String[] args) {
+       double[][] aiMatrizA = new double[5][5];
+       double[][] aiMatrizB = new double[5][5];
+       double[][] aiMatrizR = new double[5][5];
+        System.out.println("MATRIZ A --------------");
+       for (int i = 0; i < aiMatrizA.length; i++) {
+            for (int j = 0; j < aiMatrizA[i].length; j++) {
+                aiMatrizA[i][j] = (int)(Math.random() *9+1);
+                System.out.print("[" + aiMatrizA[i][j] + "]");
+                
+            }System.out.print("\n");
+            
+        }
+        System.out.println("MATRIZ B---------------");
+        for (int i = 0; i < aiMatrizB.length; i++) {
+            for (int j = 0; j < aiMatrizB.length; j++) {
+                aiMatrizB[i][j] = (int)(Math.random()* 9+1);
+                System.out.print("[" + aiMatrizB[i][j] + "]");
+            }
+            System.out.print("\n");
+            
+        }
+        System.out.println("MULTIPLICAION ------------------");
+        for (int i = 0; i < aiMatrizR.length; i++) {
+            for (int j = 0; j < aiMatrizR.length; j++) {
+                aiMatrizR[i][j]= aiMatrizA[i][j] * aiMatrizB[i][j];
+                System.out.print("[" + aiMatrizR[i][j] + "]");
+            }
+            System.out.print("\n");
+        }
+        
+    }

@@ -1,0 +1,30 @@
+public static void main(String[] args) {
+       int aiMatriz[][] = new int[5][5];
+        for (int i = 0; i < aiMatriz.length; i++) {
+            for (int j = 0; j < aiMatriz[i].length; j++) {
+                
+                aiMatriz[i][j] = (int)(Math.random()*100);
+                System.out.print("[" + aiMatriz[i][j] + "]");
+            }
+            System.out.print("\n"); 
+        }
+        System.out.println("COPIA---------");
+        int [][]aiMatrizC  = new int [5][5]; int f=0, c=0;
+        for (int i = 4; i >= 0; i--) {
+            for (int j = 4; j >=0; j--) {
+                
+                aiMatrizC[f][c]=aiMatriz[i][j];
+                c++;
+            }
+            c=0;
+            f++;
+            System.out.print("\n"); 
+        }
+        for (int i = 0; i < aiMatriz.length; i++) {
+            for (int j = 0; j < aiMatriz[i].length; j++) {
+                System.out.print("[" + aiMatrizC[i][j] + "]");
+            }
+         System.out.print("\n");}
+        
+      
+    }

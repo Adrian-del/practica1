@@ -1,0 +1,51 @@
+public static void main(String[] args) {
+         int aiEdad [];//arreglo sin inicializar
+         int contE = 0;
+         int media = 0;
+         int maxvec = 0, moda=0;
+         double varianza= 0;
+         double desviacion = 0;
+         
+     Scanner scCaptu = new Scanner(System.in);//captura desde el teclado
+    //System.cut.printl( aiEdad[5]); error se debe inicializar(new)
+     System.out.println("introduce la cantidad de edades a capturar");
+     int iCant = scCaptu.nextInt();// captura desde el teclado al dar enter 
+     aiEdad= new int [iCant];
+        for (int i = 0; i < aiEdad.length; i++) {
+            System.out.println("introduce tu edad");
+            aiEdad[i] = scCaptu.nextInt();
+            contE= contE+aiEdad[i];
+            
+        }
+        media = contE/aiEdad.length;
+        for (int i = 0; i < aiEdad.length; i++) {
+            int vecrep = 0;
+            for (int j = 0; j < aiEdad.length; j++) {
+                if(aiEdad[i] == aiEdad[j])
+                    vecrep++;
+            }
+            if(vecrep>maxvec){
+                moda=aiEdad[i];
+                maxvec=vecrep;
+            }
+        }
+        double sumatoria;
+        for (int i = 0; i < aiEdad.length; i++) {
+            sumatoria = Math.pow(aiEdad[i] - media, 2);
+            varianza+=sumatoria;
+        }
+        varianza  = varianza/aiEdad.length;
+        desviacion = Math.sqrt(varianza);
+        
+       
+        //impriman la edad
+        //for(variable: arreglo) for-each --> para--cada 
+        for (int b : aiEdad) {
+            System.out.println("Edad = " + b );
+        }
+        System.out.println("la media es = " + media);
+         System.out.println("la moda es: " + moda + " y se repitio: " + maxvec + " veces ");
+         System.out.println("la desviacion estandar es: " + desviacion);
+    }
+    
+}
